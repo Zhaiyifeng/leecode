@@ -1,13 +1,11 @@
 package com.example.leecode;
 
-import java.util.Arrays;
-
 public class SquaresOfASortedArray {
     public static void main(String[] args) {
         int[] ints = {2,-1, 15, 3, 4};
         int[] squares = sortedSquares(ints);
-        for (int i = 0; i < squares.length; i++) {
-            System.out.println(squares[i]);
+        for (int square : squares) {
+            System.out.println(square);
         }
     }
 
@@ -17,10 +15,21 @@ public class SquaresOfASortedArray {
      */
     public static int[] sortedSquares(int[] nums) {
         //最简单的写法 这么写死了算了
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = nums[i] * nums[i];
+        int left = 0;
+        int right = nums.length - 1;
+        int[] ints = new int[nums.length];
+        int index = nums.length - 1;
+        while (left <= right){
+            if (nums[left] * nums[left] > nums[right] * nums[right]){
+                ints[index] = nums[left] * nums[left];
+                index --;
+                left++;
+            }else {
+                ints[index] = nums[right] * nums[right];
+                index --;
+                right--;
+            }
         }
-        Arrays.sort(nums);
-        return nums;
+        return ints;
     }
-}
+    }
