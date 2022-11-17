@@ -1,4 +1,4 @@
-package com.example.leecode;
+package com.example.leecode.Array;
 
 /**
  * @author siboni
