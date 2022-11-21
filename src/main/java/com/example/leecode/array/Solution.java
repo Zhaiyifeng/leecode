@@ -1,4 +1,4 @@
-package com.example.leecode.Array;
+package com.example.leecode.array;
 
 public class Solution {
     /**

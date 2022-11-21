@@ -1,4 +1,4 @@
-package com.example.leecode.Array;
+package com.example.leecode.array;
 
 public class SquaresOfASortedArray {
     public static void main(String[] args) {

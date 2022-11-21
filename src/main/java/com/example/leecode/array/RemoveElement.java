@@ -1,4 +1,4 @@
-package com.example.leecode.Array;
+package com.example.leecode.array;
 
 /**
  * 27. 移除元素
